@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="HiH.xslt"?>
+<moje_hobby xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<autor>
+		<imie imie="Łukasz"></imie>
+		<nazwisko>Plust</nazwisko>
+		<kierunek uczelnia="Politechnika Gdańska">Informatyka</kierunek>
+	</autor>
+	<suplementacja>
+		<rodzaj_suplementu sumplement="kreatyna">
+		<nazwa>Kreatyna kfd</nazwa>
+                <producent>KFD</producent>
+                <ilosc>5</ilosc>
+                <cena szt="16">40</cena>
+                </informacje>
+                <zdjecie source="img/kreatyna.jpg">Kreatyna</zdjecie>
+			<link source="https://www.medonet.pl/badania,kreatyna---wlasciwosci--rodzaje--dzialanie--dawkowanie--skutki-uboczne,artykul,1570193.html">Informacje o kreatynie</link>
+		</rodzaj_suplementu>
+		<plan_dla_klienta>
+			<klient id="1">
+				<informacje>
+					<typ_rozgrzewki>rozciaganie</typ_rozgrzewki>
+                    <typ_diety>dieta na mase</typ_diety>
+                    <typ_treningu>cardio</typ_treningu>
+                    <czas_treningu>45 min</czas_treningu>
+                    <ilosc_snu>8h</ilosc_snu>
+				</informacje>
+				<zdjecie source="img/plan.jpg">Plan Treningowy</zdjecie>
+				<link source="https://www.fabrykasily.pl/porady-trenerow/plan-treningowy-sprawdz-jak-go-stworzyc"> Zerknij na plan </link>
+			</klient>
+			<klient id="2">
+				<informacje>
+					<typ_rozgrzewki>bieganie</typ_rozgrzewki>
+                    <typ_diety>dieta na redukcje</typ_diety>
+                    <typ_treningu>siłowy</typ_treningu>
+                    <czas_treningu>30 min</czas_treningu>
+                    <ilosc_snu>6h</ilosc_snu>
+				</informacje>
+				<zdjecie source="img/silka1.png">Plan Treningowy</zdjecie>
+				<link source="https://www.budujmase.pl/trening/trening-na-mase/6039-10-cio-tygodniowy-program-budowania-masy-miesniowej.html"> Zerknij na plan </link>
+			</klient>
+		</plan_dla_klienta>
+	</suplementacja>
+</moje_hobby>

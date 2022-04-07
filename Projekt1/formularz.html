@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Formularz</title>
+  <link rel="stylesheet" href="styleForm.css">
+
+
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+
+</head>
+
+<body>
+  <header>
+    <img class="slider" src="img/img1.jpg" alt="">
+    <div class="dots">
+      <span id="one" class="active"></span>
+      <span id="two"></span>
+      <span id="three"></span>
+    </div>
+  </header>
+  <main>
+    <h1 class='quiz'>Rozpsisk<span class='letterU'>a</span> treningowa</h1>
+
+    <div class='box active'>
+      <svg width="100px" height="50px"
+        style="margin:auto;display:block; position: absolute; top: 0; left: 0; opacity: 0.4">
+        <circle cx="50" cy="25" r="20" style="stroke: black; stroke-width: 5; fill: green" />
+      </svg>
+      <svg width="100px" height="50px"
+        style="margin:auto;display:block; position: absolute; right: 0; top: 0; opacity: 0.4">
+        <line x1="0" y1="2" x2="100" y2="50" style="stroke:green; stroke-width: 7px" />
+      </svg>
+      <svg height="300" width="300" style=" position: absolute; bottom: -100px; right: -50px; opacity: 0.4">
+        <circle cx="150" cy="150" r="100" stroke="yellow" stroke-width="3" fill="green" />
+      </svg>
+
+      <table>
+        <thead>
+          <tr>
+            <th id='1'>Dane</th>
+            <th>Plan dla klienta nr. 1</th>
+            <th>Plan dla klienta nr. 2</th>
+            <th>Plan dla klienta nr. 3</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>Imię</th>
+            <td>Łukasz</td>
+            <td>Stanisław</td>
+            <td>Paweł</td>
+          </tr>
+          <tr>
+            <th>Nazwisko</th>
+            <td>Plust</td>
+            <td>Plust</td>
+            <td>Plust</td>
+          </tr>
+          <tr>
+            <th>Miasto</th>
+            <td>Koszalin</td>
+            <td>Koszalin</td>
+            <td>Darłowo</td>
+          </tr>
+          <tr>
+            <th>Ulica</th>
+            <td>Witolubie</td>
+            <td>Zwyciestwa</td>
+            <td>Adama Asnyka</td>
+          </tr>
+          <tr>
+            <th>Kod pocztowy</th>
+            <td>76-039</td>
+            <td>76-032</td>
+            <td>76-121</td>
+          </tr>
+          <tr>
+            <th>Typ rozgrzewki</th>
+            <td>Rozciąganie</td>
+            <td>Rozciaganie</td>
+            <td>Rozciaganie</td>
+          </tr>
+          <tr>
+            <th>Typ diety</th>
+            <td>Dieta na masę</td>
+            <td>Dieta na redukcje</td>
+            <td>Dieta na mase</td>
+          </tr>
+          <tr>
+            <th>Typ treningu</th>
+            <td>Cardio</td>
+            <td>Silowy</td>
+            <td>Wytrzymałościowy</td>
+          </tr>
+          <tr>
+            <th>Czas treningu</th>
+            <td>45 min</td>
+            <td>60 min</td>
+            <td>1.5h</td>
+          </tr>
+          <tr>
+            <th>Ilość snu</th>
+            <td>8h</td>
+            <td>9h</td>
+            <td>10h</td>
+
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <h2 class='suplementacja'>Suplementacja</h2>
+    <div class='sup'>
+      <table id='twice'>
+        <thead>
+          <tr>
+            <th>Suplement</th>
+            <th>Stanisław</th>
+            <th>Łukasz</th>
+            <th>Paweł</th>
+          </tr>
+        <tbody>
+          <tr>
+            <th>Kreatyna WK</th>
+            <td>-</td>
+            <td>+</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <th>Kreatyna OLIMP</th>
+            <td>+</td>
+            <td>-</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <th>Kreatyna KFD</th>
+            <td>-</td>
+            <td>-</td>
+            <td>+</td>
+          </tr>
+          <tr>
+            <th>Białko KFD</th>
+            <td>-</td>
+            <td>+</td>
+            <td>+</td>
+          </tr>
+          <tr>
+            <th>Białko Olimp</th>
+            <td>+</td>
+            <td>-</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <th>BCA Olimp</th>
+            <td>+</td>
+            <td>+</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <th>Bca KFD</th>
+            <td>-</td>
+            <td>-</td>
+            <td>+</td>
+          </tr>
+        </tbody>
+
+      </table>
+    </div>
+
+    <div class='form'>
+      <h1>Formularz</h1>
+      <form method="POST" action="form.html">
+        <p class='formtxt'>Imię</p><input type='text' placeholder="imię">
+        <p class='formtxt'>Nazwisko</p><input type='text' placeholder="nazwisko">
+        <p class='formtxt'>E-mail</p><input type='email' placeholder="e-mail">
+
+        <p class='formtxt'>Podaj telefon</p><input type="number">
+        <p class='formtxt'>Podaj datę urodzenia</p>
+        <input type="date">
+        <p class='formtxt'>Twój ulubiony kolor</p>
+        <input type="color">
+
+        <p class='formtxt'>Wiadomość</p>
+        <textarea name='wiadomosc' cols='40' rows='10'></textarea>
+
+        <input type='submit'>
+        <input type='reset'>
+      </form>
+    </div>
+  </main>
+
+  <button id="opener">Zobacz !!!</button>
+  <div id="dialog" title="Dialog JQ">Przykładowe użycie Jquery UI</div>
+
+  <script>
+    $("#dialog").dialog({
+      autoOpen: false,
+      position: [100, 100],
+      maxHeight: 500,
+      maxWidth: 500
+    });
+    $("#opener").click(function () {
+      $("#dialog").dialog("open");
+    });
+  </script>
+  <script src='script1.js'></script>
+</body>
+
+
+</html>

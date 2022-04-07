@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form</title>
+
+  <style>
+    h1 {
+      text-align: center;
+      font-size: 35px;
+      font-family: 'Franklin Gothic Medium', 'PURERW_3';
+    }
+  </style>
+
+
+</head>
+
+
+<body>
+  <h1>Dziękujemy za przesłanie danych :)</h1>
+  <h1>Storage</h1>
+  <form id="form">
+    <h2>Wpisz wiadomość</h2>
+    <label for="textarea"></label>
+    <textarea id="textarea" cols="20" rows="4">
+    </textarea>
+    <button type="submit">Wyślij</button>
+  </form>
+
+  <script>
+    const form = document.querySelector("#form");
+    const txt = document.querySelector("#textarea");
+
+    if (localStorage.getItem("textareaValue") !== null) {
+      txt.value = localStorage.getItem("textareaValue");
+    }
+    txt.addEventListener("input", e => {
+      localStorage.setItem("textareaValue", txt.value);
+    });
+
+    form.addEventListener("submit", e => {
+      localStorage.removeItem("textareaValue");
+    });
+  </script>
+</body>
+
+
+</html>

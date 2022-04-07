@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema 
+    elementFormDefault="qualified" 
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+>
+
+<xs:element name="rozpiska_treningowa" type="rozpiska_treningowa_typ"/>
+
+<xs:complexType name="rozpiska_treningowa_typ">
+    <xs:sequence>
+      <xs:element name="rozpoczecie_trenowania" type="rozpoczecie_trenowania_typ" maxOccurs="unbounded"/>
+      <xs:element name="zakonczenie_trenowania" type="zakonczenie_trenowania_typ" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:element name="komentarz" type="xs:string"/>
+
+ <xs:complexType name="rozpoczecie_trenowania_typ">
+    <xs:sequence>
+      <xs:element ref="komentarz" minOccurs="0"/>
+      <xs:element name="plan_treningowy" type="plan_treningowy_typ" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:attribute ref="data"/>
+  </xs:complexType>
+
+  <xs:complexType name="zakonczenie_trenowania_typ">
+    <xs:sequence>
+      <xs:element name="plan_treningowy" type="plan_treningowy_typ" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:attribute ref="data"/>
+  </xs:complexType>
+
+
+
+<xs:complexType name="plan_treningowy_typ">
+    <xs:sequence>
+      <xs:element name="plan_dla_klienta" type="plan_dla_klienta_typ"/>
+      <xs:element name="osoba" type="osoba_typ" minOccurs="0" />
+      <xs:element name="suplementacja" type="suplementacja_typ" minOccurs="0"/>
+      <xs:element name ="cena_za_suplementy" type="cena_za_suplementy_typ"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="plan_dla_klienta_typ">
+    <xs:sequence>
+      <xs:element name="typ_rozgrzewki" type="xs:string"/>
+      <xs:element name="typ_diety" type="xs:string"/>
+      <xs:element name="typ_treningu" type="xs:string"/>
+      <xs:element name="czas_treningu" type="xs:string"/>
+      <xs:element name="ilosc_snu" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+   <xs:complexType name="osoba_typ">
+    <xs:sequence>
+      <xs:element name="imie" type="xs:string"/>
+      <xs:element name="nazwisko" type="xs:string"/>
+      <xs:element name="ulica" type="xs:string"/>
+      <xs:element name="kod_pocztowy" type="kod_pocztowy_typ"/>
+      <xs:element name="miasto" type="xs:string"/>
+    </xs:sequence>
+    <xs:attribute name="klient" type="xs:NMTOKENS"/>
+  </xs:complexType>
+
+
+  <xs:complexType name="suplementacja_typ">
+    <xs:sequence>
+      <xs:element name="rodzaj_suplementu" minOccurs="0" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="nazwa" type="nazwa_typ"/>
+            <xs:element name="producent" type="xs:string"/>
+            <xs:element name="ilosc" type="xs:decimal"/>
+            <xs:element name="cena" type="cena_typ"/>
+          </xs:sequence>
+          <xs:attribute name="suplement" type="suplement_typ"/>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:simpleType name="kod_pocztowy_typ">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="\d{2}-\d{3}"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+   <xs:simpleType name="suplement_typ">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="kreatyna" />
+      <xs:enumeration value="bialko" />
+      <xs:enumeration value="BCA" />
+    </xs:restriction>
+  </xs:simpleType>
+
+    <xs:simpleType name="cena_za_suplementy_typ">
+    <xs:restriction base="xs:decimal">
+      <xs:minExclusive value="0"/>
+      <xs:maxExclusive value="1000000"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="nazwa_typ">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1"/>
+      <xs:maxLength value="20"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+<xs:simpleType name="cena_typ">
+    <xs:restriction base="xs:decimal">
+      <xs:minExclusive value="0"/>
+      <xs:maxExclusive value="10000"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:attribute name="data" type="xs:date" />
+
+  </xs:schema>

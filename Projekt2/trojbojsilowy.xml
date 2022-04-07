@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rozpiska_treningowa>
+<rozpoczecie_trenowania data="2016-01-01">
+<komentarz>Silownia jest dla kazdego</komentarz>
+    <plan_treningowy>
+
+        <plan_dla_klienta>
+        <typ_rozgrzewki>rozciaganie</typ_rozgrzewki>
+        <typ_diety>dieta na mase</typ_diety>
+        <typ_treningu>cardio</typ_treningu>
+        <czas_treningu>45 min</czas_treningu>
+        <ilosc_snu>8h</ilosc_snu>
+        </plan_dla_klienta>
+
+        <osoba klient="nr1">
+        <imie>Łukasz</imie>
+        <nazwisko>Plust</nazwisko>
+        <ulica>Witolubie 3</ulica>
+        <kod_pocztowy>76-039</kod_pocztowy>
+        <miasto>Koszalin</miasto>
+        </osoba>
+
+        <suplementacja>
+            <rodzaj_suplementu suplement="kreatyna">
+                <nazwa>Kreatyna wk</nazwa>
+                <producent>Wk sklep</producent>
+                <ilosc>5</ilosc>
+                <cena>50</cena>
+            </rodzaj_suplementu>
+
+            <rodzaj_suplementu suplement="bialko">
+                <nazwa>Bialko kfd</nazwa>
+                <producent>KFD</producent>
+                <ilosc>15</ilosc>
+                <cena>80</cena>
+            </rodzaj_suplementu>
+
+            <rodzaj_suplementu suplement="BCA">
+                <nazwa>BCA Olimp</nazwa>
+                <producent>Olimp</producent>
+                <ilosc>5</ilosc>
+                <cena>100</cena>
+            </rodzaj_suplementu>
+        </suplementacja>
+            <cena_za_suplementy>230</cena_za_suplementy>
+            
+    </plan_treningowy>
+
+
+    <plan_treningowy>
+
+        <plan_dla_klienta>
+        <typ_rozgrzewki>rozciaganie</typ_rozgrzewki>
+        <typ_diety>dieta na redukcje</typ_diety>
+        <typ_treningu>silowy</typ_treningu>
+        <czas_treningu>60 min</czas_treningu>
+        <ilosc_snu>9h</ilosc_snu>
+        </plan_dla_klienta>
+
+        <osoba klient="nr2">
+        <imie>Stanislaw</imie>
+        <nazwisko>Plust</nazwisko>
+        <ulica>Zwyciestwa 2</ulica>
+        <kod_pocztowy>76-032</kod_pocztowy>
+        <miasto>Mielno</miasto>
+        </osoba>
+
+        <suplementacja>
+            <rodzaj_suplementu suplement="kreatyna">
+                <nazwa>Kreatyna Olimp</nazwa>
+                <producent>Olimp</producent>
+                <ilosc>5</ilosc>
+                <cena>80</cena>
+            </rodzaj_suplementu>
+
+            <rodzaj_suplementu suplement="bialko">
+                <nazwa>Bialko Olimp</nazwa>
+                <producent>Olimp</producent>
+                <ilosc>15</ilosc>
+                <cena>120</cena>
+            </rodzaj_suplementu>
+
+            <rodzaj_suplementu suplement="BCA">
+                <nazwa>BCA Olimp</nazwa>
+                <producent>Olimp</producent>
+                <ilosc>5</ilosc>
+                <cena>100</cena>
+            </rodzaj_suplementu>
+        </suplementacja>
+            <cena_za_suplementy>300</cena_za_suplementy>
+            
+    </plan_treningowy>
+    </rozpoczecie_trenowania>
+<zakonczenie_trenowania data="2021-01-01">
+    <plan_treningowy>
+
+        <plan_dla_klienta>
+        <typ_rozgrzewki>rozciaganie</typ_rozgrzewki>
+        <typ_diety>dieta na mase</typ_diety>
+        <typ_treningu>wytrzymalosciowy</typ_treningu>
+        <czas_treningu>1.5h</czas_treningu>
+        <ilosc_snu>10h</ilosc_snu>
+        </plan_dla_klienta>
+
+        <osoba klient="nr3">
+        <imie>Pawel</imie>
+        <nazwisko>Plust</nazwisko>
+        <ulica>Adama Asnyka 5</ulica>
+        <kod_pocztowy>76-121</kod_pocztowy>
+        <miasto>Darłowo</miasto>
+        </osoba>
+
+        <suplementacja>
+            <rodzaj_suplementu suplement="kreatyna">
+            <informacje>
+                <nazwa>Kreatyna kfd</nazwa>
+                <producent>KFD</producent>
+                <ilosc>5</ilosc>
+                <cena szt="16">40</cena>
+                </informacje>
+                <zdjecie source="img/kreatyna.jpg">Kreatyna</zdjecie>
+			<link source="https://www.medonet.pl/badania,kreatyna---wlasciwosci--rodzaje--dzialanie--dawkowanie--skutki-uboczne,artykul,1570193.html">Informacje o kreatynie</link>
+            </rodzaj_suplementu>
+
+            <rodzaj_suplementu suplement="bialko">
+                <nazwa>Bialko kfd</nazwa>
+                <producent>KFD</producent>
+                <ilosc>15</ilosc>
+                <cena>80</cena>
+            </rodzaj_suplementu>
+
+            <rodzaj_suplementu suplement="BCA">
+                <nazwa>BCA kfd</nazwa>
+                <producent>KFD</producent>
+                <ilosc>5</ilosc>
+                <cena>60</cena>
+            </rodzaj_suplementu>
+            </suplementacja>
+            <cena_za_suplementy>180</cena_za_suplementy>
+    
+
+        </plan_treningowy>
+    </zakonczenie_trenowania>   
+        
+</rozpiska_treningowa>

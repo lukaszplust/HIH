@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galeria</title>
+  <link href="dist/css/lightbox.min.css" rel="stylesheet" />
+
+  <style>
+    * {
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      box-sizing: border-box;
+      padding: 0;
+      margin: 0;
+      overflow: hidden;
+    }
+
+
+    h1 {
+      margin-top: 5vh;
+      text-align: center;
+      font-size: 60px;
+    }
+
+    .images {
+      margin-top: 10%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+
+    }
+
+    img {
+      -webkit-box-shadow: -3px 15px 35px 6px rgba(66, 68, 90, 1);
+      -moz-box-shadow: -3px 15px 35px 6px rgba(66, 68, 90, 1);
+      box-shadow: -3px 15px 35px 6px rgba(66, 68, 90, 1);
+    }
+
+    #changeBgc {
+      position: absolute;
+      top: 60%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 30px;
+      border-radius: 25px;
+      border: 2px solid #73AD21;
+      padding: 20px;
+      width: 200px;
+      height: 150px;
+    }
+
+    #changeBgc:hover {
+      background-color: gray;
+    }
+
+    #changeBgc.active {
+      background-color: cadetblue;
+    }
+
+    h1.active {
+      animation: LeftRight 2s linear infinite;
+    }
+
+    @keyframes LeftRight {
+      0% {}
+
+      33.3% {
+        transform: translateX(200px);
+      }
+
+      66.6% {
+        transform: translateX(-200px);
+      }
+
+      100% {
+        transform: translateX(0);
+      }
+    }
+  </style>
+
+</head>
+
+
+<body>
+  <div id='container'>
+    <h1>Galeria zdjęć</h1>
+    <div class='images'>
+      <a data-lightbox="www" href='img/img4.jpg' data-title="My caption"><img src='img/img4.jpg' alt='miniatura'
+          width="100" height="100"></a>
+
+      <a data-lightbox="www" href='img/img5.jpg'><img src='img/img5.jpg' alt='miniatura' width="100" height="100"></a>
+
+      <a data-lightbox="www" href='img/img6.jpg'><img src='img/img6.jpg' alt='miniatura' width="100" height="100"></a>
+      <a data-lightbox="www" href='img/img7.jpg'><img src='img/img7.jpg' alt='miniatura' width="100" height="100"></a>
+
+      <a data-lightbox="www" href='img/img8.jpg'><img src='img/img8.jpg' alt='miniatura' width="100" height="100"></a>
+    </div>
+    <button id='changeBgc'>Zmień Tło</button>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="dist/js/lightbox.js"></script>
+  </div>
+
+  <script>
+    $(document).ready(function () {
+      $('#changeBgc').click(function () {
+        $(this).toggleClass("active");
+        $('h1').toggleClass('active');
+      });
+    });
+  </script>
+
+</body>
+
+
+
+
+</html>
